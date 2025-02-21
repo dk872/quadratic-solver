@@ -1,4 +1,5 @@
 import sys
+import math
 
 
 def get_coefficient(name: str) -> float:
@@ -33,3 +34,21 @@ def read_coefficients_from_file(filename: str):
     except ValueError:
         print("invalid file format", file=sys.stdout)
         sys.exit(1)
+
+
+def solve_quadratic(a: float, b: float, c: float):
+    print(f"Equation is: ({a}) x^2 + ({b}) x + ({c}) = 0")
+
+    discriminant = b ** 2 - 4 * a * c
+    if discriminant > 0:
+        root1 = (-b - math.sqrt(discriminant)) / (2 * a)
+        root2 = (-b + math.sqrt(discriminant)) / (2 * a)
+        print("There are 2 roots")
+        print(f"x1 = {0.0 if root1 == -0.0 else root1}")
+        print(f"x2 = {0.0 if root2 == -0.0 else root2}")
+    elif discriminant == 0:
+        root = -b / (2 * a)
+        print("There are 1 roots")
+        print(f"x1 = {0.0 if root == -0.0 else root}")
+    else:
+        print("There are 0 roots")
