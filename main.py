@@ -52,3 +52,18 @@ def solve_quadratic(a: float, b: float, c: float):
         print(f"x1 = {0.0 if root == -0.0 else root}")
     else:
         print("There are 0 roots")
+
+
+def main():
+    if len(sys.argv) == 2:
+        a, b, c = read_coefficients_from_file(sys.argv[1])
+    else:
+        a = get_coefficient("a")
+        b = get_coefficient("b")
+        c = get_coefficient("c")
+    solve_quadratic(a, b, c)
+
+
+if __name__ == "__main__":
+    main()
+    
