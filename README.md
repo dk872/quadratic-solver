@@ -20,3 +20,37 @@ or read from a file.
     ```
     1.0 -3.0 2.0
     ```
+
+## Running the program
+- **On Linux:**
+  - Make sure you have Python installed. You can check with:
+    ```
+    python3 --version
+    ```
+  - Run the script and enter coefficients *manually*:
+    ```
+    python3 main.py
+    ```
+  - Or run the program *with the file* as an argument:
+    ```
+    python3 main.py <path-to-the-file>
+    ```
+  - Alternatively, make the script executable and run it directly:
+    ```
+    chmod +x main.py
+    ./main.py
+    ```
+
+- **On Windows:**
+  - Make sure Python is installed and added to the system PATH. You can check with:
+    ```
+    python --version
+    ```
+  - Run the script and enter coefficients *manually*:
+    ```
+    python main.py
+    ```
+  - Or run the program with the file as an argument:
+    ```
+    python main.py <path-to-the-file>
+    ```
