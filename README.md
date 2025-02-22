@@ -50,7 +50,7 @@ or read from a file.
     ```
     python main.py
     ```
-  - Or run the program with the file as an argument:
+  - Or run the program *with the file* as an argument:
     ```
     python main.py <path-to-the-file>
     ```
