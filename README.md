@@ -22,6 +22,14 @@ or read from a file.
     ```
 
 ## Running the program
+First, clone the repository and navigate into the project directory:
+```
+git clone https://github.com/dk872/quadratic-solver
+```
+```
+cd quadratic-solver
+```
+
 - **On Linux:**
   - Make sure you have Python installed. You can check with:
     ```
