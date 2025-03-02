@@ -1,6 +1,5 @@
 import sys
 import math
-import logging
 
 
 def get_coefficient(name: str) -> float:
@@ -41,7 +40,6 @@ def solve_quadratic(a: float, b: float, c: float):
     print(f"Equation is: ({a}) x^2 + ({b}) x + ({c}) = 0")
 
     discriminant = b ** 2 - 4 * a * c
-    logging.debug(f"Discriminant = {discriminant}")
     if discriminant > 0:
         root1 = (-b - math.sqrt(discriminant)) / (2 * a)
         root2 = (-b + math.sqrt(discriminant)) / (2 * a)
@@ -57,16 +55,12 @@ def solve_quadratic(a: float, b: float, c: float):
 
 
 def main():
-    logging.basicConfig(filename="log.txt", level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
-    logging.debug("Program started")
-
     if len(sys.argv) == 2:
         a, b, c = read_coefficients_from_file(sys.argv[1])
     else:
         a = get_coefficient("a")
         b = get_coefficient("b")
         c = get_coefficient("c")
-    logging.debug(f"Read coefficients: a={a}, b={b}, c={c}")
     solve_quadratic(a, b, c)
 
 
