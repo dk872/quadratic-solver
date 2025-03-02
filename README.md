@@ -62,3 +62,6 @@ cd quadratic-solver
     ```
     python main.py <path-to-the-file>
     ```
+
+## Revert commit
+[link](https://github.com/dk872/quadratic-solver/commit/c17bd9bdf7c6d255f560be94b62588c9fea8fc0a)
