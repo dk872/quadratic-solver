@@ -30,10 +30,14 @@ def read_coefficients_from_file(filename: str):
             if len(parts) != 3:
                 print("invalid file format", file=sys.stdout)
                 sys.exit(1)
-            a, b, c = map(float, parts)
+
+            a = convert_to_float(parts[0])
             if a == 0:
                 print("Error. a cannot be 0", file=sys.stdout)
                 sys.exit(1)
+
+            b = convert_to_float(parts[1])
+            c = convert_to_float(parts[2])
             return a, b, c
     except FileNotFoundError:
         print(f"file {filename} does not exist", file=sys.stdout)
