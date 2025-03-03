@@ -29,13 +29,11 @@ def read_coefficients_from_file(filename: str):
             line = file.readline().strip()
             parts = line.split()
             if len(parts) != 3:
-                print("invalid file format", file=sys.stdout)
-                sys.exit(1)
+                raise ValueError("invalid file format")
 
             a = convert_to_float(parts[0])
             if a == 0:
-                print("Error. a cannot be 0", file=sys.stdout)
-                sys.exit(1)
+                raise ValueError("Error. a cannot be 0")
 
             b = convert_to_float(parts[1])
             c = convert_to_float(parts[2])
