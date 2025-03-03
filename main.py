@@ -43,8 +43,8 @@ def read_coefficients_from_file(filename: str):
     except FileNotFoundError:
         print(f"file {filename} does not exist", file=sys.stdout)
         sys.exit(1)
-    except ValueError:
-        print("invalid file format", file=sys.stdout)
+    except ValueError as e:
+        print(f"{e}", file=sys.stdout)
         sys.exit(1)
 
 
