@@ -16,8 +16,7 @@ def get_coefficient(name: str) -> float:
             num = convert_to_float(value)
 
             if name == "a" and num == 0:
-                print("Error. a cannot be 0.", file=sys.stdout)
-                continue
+                raise ValueError("Error. a cannot be 0")
             return num
         except ValueError as e:
             print(f"{e}", file=sys.stdout)
