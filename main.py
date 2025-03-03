@@ -53,11 +53,13 @@ def solve_quadratic(a: float, b: float, c: float):
     if discriminant > 0:
         root1 = (-b - math.sqrt(discriminant)) / (2 * a)
         root2 = (-b + math.sqrt(discriminant)) / (2 * a)
+
         print("There are 2 roots")
         print(f"x1 = {0.0 if root1 == -0.0 else root1}")
         print(f"x2 = {0.0 if root2 == -0.0 else root2}")
     elif discriminant == 0:
         root = -b / (2 * a)
+
         print("There is 1 root")
         print(f"x1 = {0.0 if root == -0.0 else root}")
     else:
@@ -71,6 +73,7 @@ def main():
         a = get_coefficient("a")
         b = get_coefficient("b")
         c = get_coefficient("c")
+
     solve_quadratic(a, b, c)
 
 
