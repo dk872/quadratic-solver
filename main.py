@@ -2,6 +2,13 @@ import sys
 import math
 
 
+def convert_to_float(value: str) -> float:
+    try:
+        return float(value)
+    except ValueError:
+        raise ValueError(f"Error. Expected a valid real number, got {value} instead")
+
+
 def get_coefficient(name: str) -> float:
     while True:
         try:
