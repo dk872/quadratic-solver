@@ -13,7 +13,8 @@ def get_coefficient(name: str) -> float:
     while True:
         try:
             value = input(f"{name} = ")
-            num = float(value)
+            num = convert_to_float(value)
+
             if name == "a" and num == 0:
                 print("Error. a cannot be 0.", file=sys.stdout)
                 continue
