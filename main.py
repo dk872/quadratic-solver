@@ -48,7 +48,7 @@ def solve_quadratic(a: float, b: float, c: float):
         print(f"x2 = {0.0 if root2 == -0.0 else root2}")
     elif discriminant == 0:
         root = -b / (2 * a)
-        print("There are 1 roots")
+        print("There is 1 root")
         print(f"x1 = {0.0 if root == -0.0 else root}")
     else:
         print("There are 0 roots")
