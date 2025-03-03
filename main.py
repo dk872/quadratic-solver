@@ -19,8 +19,9 @@ def get_coefficient(name: str) -> float:
                 print("Error. a cannot be 0.", file=sys.stdout)
                 continue
             return num
-        except ValueError:
-            print(f"Error. Expected a valid real number, got {value} instead", file=sys.stdout)
+        except ValueError as e:
+            print(f"{e}", file=sys.stdout)
+            continue
 
 
 def read_coefficients_from_file(filename: str):
