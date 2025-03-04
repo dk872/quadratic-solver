@@ -19,7 +19,7 @@ def get_coefficient(name: str) -> float:
                 raise ValueError("Error. a cannot be 0")
             return num
         except ValueError as e:
-            print(f"{e}", file=sys.stdout)
+            print(f"{e}")
             continue
 
 
@@ -39,10 +39,10 @@ def read_coefficients_from_file(filename: str):
             c = convert_to_float(parts[2])
             return a, b, c
     except FileNotFoundError:
-        print(f"file {filename} does not exist", file=sys.stdout)
+        print(f"file {filename} does not exist")
         sys.exit(1)
     except ValueError as e:
-        print(f"{e}", file=sys.stdout)
+        print(f"{e}")
         sys.exit(1)
 
 
