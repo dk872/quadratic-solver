@@ -65,3 +65,6 @@ cd quadratic-solver
 
 ## Revert commit
 [link](https://github.com/dk872/quadratic-solver/commit/c17bd9bdf7c6d255f560be94b62588c9fea8fc0a)
+
+## Author info
+Dmytro Kulyk, a student of group IM-32
